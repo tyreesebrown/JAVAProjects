@@ -1,0 +1,19 @@
+public class Main {
+	public static void main(String[] args) {
+		int x, y, n;
+			x = 2;
+			y = 3;
+			n = 30;
+			for (int i=1; i < n; i++) {
+				if (i%(x*y) == 0)
+					System.out.print("FB");
+				else if (i%x == 0)
+					System.out.print('F');
+				else if (i%y == 0)
+					System.out.print('B');
+				else 
+					System.out.print(i);
+			}
+		}
+	}
+
