@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Enter a fizz int");
+		int x = scan.nextInt();
+		System.out.println("Enter a buzz int");
+		int y = scan.nextInt();
+		System.out.println("Enter a number to count to");
+		int n = scan.nextInt();
+		
+			for (int i=1; i <= n; i++) {
+				if (i%(x*y) == 0)
+					System.out.print("FB");
+				else if (i%x == 0)
+					System.out.print('F');
+				else if (i%y == 0)
+					System.out.print('B');
+				else 
+					System.out.print(i);
+			}
+			scan.close();
+		}
+	}
