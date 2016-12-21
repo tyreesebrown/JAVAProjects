@@ -1,0 +1,22 @@
+//Computes greatest common denominator between two integers
+import java.util.Scanner;
+
+public class GCD {
+	public static void main(String [] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter two positive integers");
+		int x = scan.nextInt();
+		int y = scan.nextInt();
+		int gcd;
+		
+		if (x < y)
+			gcd = x;
+		else
+			gcd = y;
+		while ((x % gcd != 0) && (y % gcd != 0))
+			gcd--;
+			System.out.println("The greatest common denominator is " + gcd);
+
+	scan.close();	
+	}
+}
