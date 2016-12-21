@@ -1,0 +1,29 @@
+//Program bubble sorts 10 numbers
+import java.util.Scanner;
+public class BubbleSort {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter ten numbers"); 
+		double[] numArray = new double[10];
+		double temp;
+		boolean flag = true;
+		for(int i=0; i<10; i++)
+			numArray[i] = scan.nextDouble();
+		while(flag){
+			flag = false;
+			for(int j=0; j<=numArray.length-1; j++){
+			if 	(j == numArray.length-1);
+			else if (numArray[j] > numArray[j+1]){
+				temp = numArray[j];
+				numArray[j] = numArray[j+1];
+				numArray[j+1] = temp;
+				flag = true;
+				}
+			}
+		}
+		for(int k=0; k<=numArray.length-1; k++)
+			System.out.print(numArray[k] + " ");
+		scan.close();
+	}
+}
+	
