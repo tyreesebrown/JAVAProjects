@@ -1,0 +1,19 @@
+/* Program prompts user to enter a number n. Program then displays an n-by-n matrix 
+ * in which each element is a randomly generated 0 or 1 */
+import java.util.Scanner;
+import java.math.*;
+
+public class Exercise06_17 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter n");
+		int n = scan.nextInt();
+		
+		for(int x = 1; x <= n; x++){
+			for(int y = 1; y <= n; y++)
+				System.out.print(Math.round(Math.random()) + " ");
+			System.out.println("\n");
+		}
+		scan.close();
+		}			
+	}
