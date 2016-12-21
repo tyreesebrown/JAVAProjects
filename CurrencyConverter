@@ -1,0 +1,30 @@
+/*Program prompts user to enter the exchange rate from currency in US Dollars to
+ * Chinese RMB. Then prompts user to enter 0 to convert from US Dollars to Chinese 
+ * RMB and 1 to convert Chinese RMB into US Dollars. Program then prompts user to 
+ * enter the amount of currency being converted */
+import java.util.Scanner;
+
+public class CurrencyConverter {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the exchange rate from USD to RMB");
+		double exRate = scan.nextDouble();
+		System.out.println("Enter 0 to convert USD to RMB and 1 vice versa");
+		int x = scan.nextInt();
+		int amount;
+		if (x == 0){
+			System.out.println("Enter the dollar amount");
+			amount = scan.nextInt();
+			System.out.println("$" + amount + " is " + amount*exRate + " yuan");
+		}
+		else if (x==1){
+			System.out.println("Enter the RMB amount");
+			amount = scan.nextInt();
+			System.out.println(amount + " yuan is $" + amount/exRate);
+		}
+		else
+			System.out.println("Please enter either 0 or 1 to exchange currency");
+		
+		scan.close();
+		}			
+	}
